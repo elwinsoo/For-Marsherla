@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Marsherla</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica', sans-serif;
+      background: linear-gradient(to bottom right, #ffe1ec, #fff0f5);
+      color: #2d2d2d;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 50px 15px;
+      background: linear-gradient(to right, #d4145a, #fbb03b);
+      color: white;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 1em;
+      font-weight: 300;
+    }
+
+    .section {
+      padding: 30px 20px;
+      background-color: rgba(255, 255, 255, 0.95);
+      margin: 20px auto;
+      max-width: 95%;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .section h2 {
+      color: #d4145a;
+      font-size: 1.6em;
+      margin-bottom: 20px;
+    }
+
+    .reasons {
+      text-align: left;
+      margin: 20px auto;
+      padding: 0 10px;
+      max-width: 90%;
+      font-size: 1em;
+    }
+
+    .reasons li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 26px;
+    }
+
+    .reasons li::before {
+      content: "💖";
+      position: absolute;
+      left: 0;
+    }
+
+    .question {
+      background: linear-gradient(to bottom right, #ffd6e0, #f9c0d7);
+      padding: 40px 15px;
+      border-top: 3px dashed #ff7e9e;
+      border-bottom: 3px dashed #ff7e9e;
+    }
+
+    .question h2 {
+      font-size: 1.6em;
+      color: #a00045;
+      margin-bottom: 20px;
+    }
+
+    .question p {
+      margin-bottom: 20px;
+      font-size: 1em;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .buttons button {
+      font-size: 1.1em;
+      padding: 12px 28px;
+      margin: 8px;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .yes {
+      background: linear-gradient(to right, #ff4b91, #ff0066);
+      color: white;
+    }
+
+    .no {
+      background-color: #f7f7f7;
+      color: #777;
+    }
+
+    .yes:hover {
+      background: linear-gradient(to right, #ff0066, #ff4b91);
+      transform: scale(1.05);
+    }
+
+    .no:hover {
+      background-color: #e0e0e0;
+      transform: scale(1.05);
+    }
+
+    @media (min-width: 768px) {
+      header h1 {
+        font-size: 3em;
+      }
+
+      .section {
+        padding: 50px 30px;
+      }
+
+      .question h2 {
+        font-size: 2.4em;
+      }
+
+      .buttons button {
+        font-size: 1.3em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>To Marsherla Lovesenzia</h1>
+    <p>From the bottom of my heart, this is for you.</p>
+  </header>
+
+  <div class="section">
+    <h2>My Feeling</h2>
+    <p>Ever since I met you, everything changed. You've made my world brighter, warmer, and so full of life.</p>
+  </div>
+
+  <div class="section">
+    <h2>Why I Like You</h2>
+    <ul class="reasons">
+      <li>You make me smile without even trying.</li>
+      <li>Your laugh is my favorite sound.</li>
+      <li>I feel safe and happy around you.</li>
+      <li>You’re kind, beautiful, and lovable.</li>
+      <li>I just love you.</li>
+    </ul>
+  </div>
+
+  <div class="section question">
+    <h2>Marsherla, out of all the people in this world, I found my rhythm in you.</h2>
+    <p>Your smile calms the chaos of my mind, and your voice is the melody that keeps me grounded.</p>
+    <p>Every laugh we share, every moment with you, turns into a memory I hold close.</p>
+    <p>This isn’t just about affection—it's about creating something lasting. I want to be serious with you and grow together.</p>
+    <p>So here I am, not with perfect words, but with a heart that’s ready to take that next step.</p>
+    <h2>So My Ping... Will You Be My Girlfriend?</h2>
+    <div class="buttons">
+      <button class="yes" onclick="celebrateYes()">YES</button>
+      <button class="no" onclick="alert('No? 😢 I still love you anyway.')">NO</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    function celebrateYes() {
+      alert("WOHOOOO! 🎉 I LOVE YOU, MY PING!");
+      const duration = 3 * 1000;
+      const end = Date.now() + duration;
+      (function frame() {
+        confetti({
+          particleCount: 5,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+        });
+        confetti({
+          particleCount: 5,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+        });
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      })();
+    }
+  </script>
+</body>
+</html>
